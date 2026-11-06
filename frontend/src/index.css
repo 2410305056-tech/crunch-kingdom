@@ -1,89 +1,70 @@
 @import "tailwindcss";
 
 :root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-
-  --bg-surface: #111319;
-  --bg-surface-low: #191b22;
-  --bg-surface-container: #1e1f26;
-  --bg-surface-high: #282a30;
-  --color-primary: #ffb800;
-  --color-on-primary: #412d00;
-  --text-on-surface: #e2e2eb;
-  --text-secondary: #9e8f78;
-  --border-subtle: #282d3c;
+  
+  --color-gold: #C5A880;
+  --color-gold-light: #E8D5B5;
+  --color-gold-dark: #8C6D46;
+  --color-noir: #0B0C10;
+  --color-surface: #121319;
+  --color-surface-hover: #1A1C24;
+  --color-ecru: #F7F4EF;
+  --color-muted: #8E8A82;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  background-color: var(--bg-surface);
-  color: var(--text-on-surface);
+body {
   font-family: var(--font-sans);
+  background-color: var(--color-noir);
+  color: #E8E5DF;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
-::selection {
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-}
-
-/* Subtle clean scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #111319;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #282d3c;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3e4456;
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 .font-sans {
   font-family: var(--font-sans);
 }
 
-.font-mono {
-  font-family: var(--font-mono);
+/* Subtle luxury gold gradient border */
+.gold-gradient-border {
+  border-image: linear-gradient(to right, rgba(197, 168, 128, 0.4), rgba(232, 213, 181, 0.8), rgba(197, 168, 128, 0.4)) 1;
 }
 
-/* Equalizer dynamic animation */
-@keyframes barBounce {
-  0%, 100% {
-    height: 25%;
-  }
-  50% {
-    height: 95%;
-  }
+/* Soft ambient gold glow */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(197, 168, 128, 0.18);
 }
 
-.animate-equalizer-1 {
-  animation: barBounce 0.8s ease-in-out infinite;
-}
-.animate-equalizer-2 {
-  animation: barBounce 0.55s ease-in-out infinite 0.1s;
-}
-.animate-equalizer-3 {
-  animation: barBounce 0.7s ease-in-out infinite 0.2s;
-}
-.animate-equalizer-4 {
-  animation: barBounce 0.6s ease-in-out infinite 0.3s;
-}
-.animate-equalizer-5 {
-  animation: barBounce 0.75s ease-in-out infinite 0.15s;
+.gold-glow-subtle {
+  box-shadow: 0 0 20px -3px rgba(197, 168, 128, 0.1);
 }
 
+/* Subtle editorial grain */
+.bg-atelier-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(197, 168, 128, 0.08) 0%, rgba(11, 12, 16, 0) 70%);
+}
+
+/* Custom delicate luxury scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252833;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
