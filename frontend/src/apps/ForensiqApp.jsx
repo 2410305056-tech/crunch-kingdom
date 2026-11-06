@@ -598,3 +598,4 @@ export default function ForensiqApp() {
     </div>
   );
 }
+
